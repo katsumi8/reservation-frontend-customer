@@ -17,7 +17,7 @@
     "isolatedModules": true,
     "moduleResolution": "node",
     "jsx": "preserve",
-    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
+    "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
     "paths": {
       "@/*": [
         "./src/*"

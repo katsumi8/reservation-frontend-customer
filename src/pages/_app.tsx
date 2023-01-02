@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import { Provider } from "react-redux";
-import { store } from "../../contexts/store";
+import { store } from "@/contexts/store";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import type { AppProps } from "next/app";
 

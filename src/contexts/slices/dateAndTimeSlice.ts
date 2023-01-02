@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { startOfDateFinder } from "const/initialDate";
+import { startOfDateFinder } from "@/const/initialDate";
 
 const initialDate = startOfDateFinder();
 

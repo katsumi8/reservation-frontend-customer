@@ -1,16 +1,19 @@
-import Reservation from "@/components/Reservation";
 import Head from "next/head";
+import React from "react";
 
-const title = "Create your reservation";
+const title = "Choose your table";
 
-export default function Home() {
+
+function SeatSelect() {
   return (
     <div>
       <Head>
         <title>{title}</title>
         <meta name="description" content="Make a reservation at this cafe" />
       </Head>
-      <Reservation title={title} />
+
     </div>
   );
 }
+
+export default SeatSelect;

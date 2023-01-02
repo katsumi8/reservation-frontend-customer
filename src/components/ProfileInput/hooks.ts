@@ -1,4 +1,4 @@
-import { useSelector } from "contexts/store";
+import { useSelector } from "@/contexts/store";
 import {
   dateCreator,
   enteredGuestFix,
@@ -8,7 +8,8 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { styles } from "./const";
 import { useReservationCreator } from "@/hooks/mutation/reservationCreate";
-import type { ReservationCreateVariables, UserInput } from "types/graphqlTypes";
+import { UserInput, ReservationCreateVariables } from "@/types/graphqlTypes";
+
 
 export const useCreateForm = () => {
   let inputStyle = styles.input;
