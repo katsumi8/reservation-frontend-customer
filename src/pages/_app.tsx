@@ -3,14 +3,15 @@ import { MantineProvider } from "@mantine/core";
 import { Provider } from "react-redux";
 import { store } from "../../contexts/store";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import type { AppProps } from "next/app";
+
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/%E3%81%A7%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E8%B5%B7%E5%8B%95%E4%B8%AD%E3%83%BB%E3%83%BB%E3%83%BB",
+  uri: process.env.NEXT_PUBLIC_BACKEND_URL as string,
   cache: new InMemoryCache(),
 });
 
-export default function App(props) {
-  const { Component, pageProps } = props;
+export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
