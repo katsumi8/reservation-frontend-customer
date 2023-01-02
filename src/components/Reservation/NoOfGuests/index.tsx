@@ -2,11 +2,9 @@ import React from "react";
 import { NativeSelect } from "@mantine/core";
 import { NumberInput } from "@mantine/core";
 import { useDispatch } from "react-redux";
-import { useSelector } from "../../../../contexts/store";
-import {
-  selectNumber,
-  moreNumber,
-} from "../../../../contexts/slices/pplNumberSlice";
+import { useSelector } from "@/contexts/store";
+import { selectNumber, moreNumber } from "@/contexts/slices/pplNumberSlice";
+
 
 const NoOfGuests = ({}) => {
   const ppl_arry = ["1", "2", "3", "4", "more"];

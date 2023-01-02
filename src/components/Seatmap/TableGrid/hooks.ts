@@ -1,8 +1,8 @@
-import { useSelector } from "contexts/store";
+import { useSelector } from "@/contexts/store";
 import { useDispatch } from "react-redux";
-import { selectTable, deselectTable } from "contexts/slices/tableSlice";
+import { deselectTable, selectTable } from "@/contexts/slices/tableSlice";
+import { tableInputState,Table } from "@/types/hooksTypes";
 
-import type { tableInputState, Table } from "types/hooksTypes";
 
 export const useTableGrid = () => {
   const dispatch = useDispatch();

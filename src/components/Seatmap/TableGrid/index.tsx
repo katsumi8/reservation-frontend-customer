@@ -1,5 +1,5 @@
 import { useTableGrid } from "./hooks";
-import { propTableType } from "types/propTypes";
+import { propTableType } from "@/types/propTypes";
 import { containerStyle } from "./style";
 
 const TableGrid = ({ tableData }: propTableType) => {

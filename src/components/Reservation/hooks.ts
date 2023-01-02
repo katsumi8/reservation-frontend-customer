@@ -1,14 +1,14 @@
-import { useSelector } from "contexts/store";
 import timeSlotDropdownAll from "./const/timeSlotDropdownAll";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { currentSlot } from "./const/todaysFirstTimeSlot";
-import { deselectTable } from "contexts/slices/tableSlice";
-import { inputDescription } from "contexts/slices/descriptionSlice";
+import { deselectTable } from "@/contexts/slices/tableSlice";
+import { inputDescription } from "@/contexts/slices/descriptionSlice";
 import React, { useEffect, useState } from "react";
 import { useTableReservationStatusUpdate } from "@/hooks/mutation/tableReservationStatusUpdate";
 import { dateCreator } from "../Seatmap/DisplayReservationInfo/hooks";
-import { TimeInput } from "types/graphqlTypes";
+import { TimeInput } from "@/types/graphqlTypes";
+import { useSelector } from "@/contexts/store";
 
 export const useHandleReservation = () => {
   const { updateTableReserveStatus } = useTableReservationStatusUpdate();

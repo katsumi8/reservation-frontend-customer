@@ -1,6 +1,6 @@
-import { useSelector } from "contexts/store";
+import { useSelector } from "@/contexts/store";
 import { useDispatch } from "react-redux";
-import { selectDate } from "contexts/slices/dateAndTimeSlice";
+import { selectDate } from "@/contexts/slices/dateAndTimeSlice";
 
 export const useDateSelectCreator = () => {
   const selectedDate = useSelector((state) => state.timeAndSlot.date);
