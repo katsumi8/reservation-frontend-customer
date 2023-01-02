@@ -1,4 +1,4 @@
-import { useSelector } from "contexts/store";
+import { useSelector } from "@/contexts/store";
 import { table, columns, rows, lastRow } from "./style";
 import { dateCreator, enteredGuestFix } from "./hooks";
 
