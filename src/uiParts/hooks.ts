@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import { useSelector } from "contexts/store";
-import { tableData } from "@/pages/Seatmap/const";
+import { tableData } from "@/components/Seatmap/const";
+import { useSelector } from "@/contexts/store";
 
 export const useRouting = () => {
   const router = useRouter();

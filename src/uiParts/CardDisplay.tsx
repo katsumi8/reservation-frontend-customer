@@ -1,6 +1,6 @@
 import { Card } from "@mantine/core";
 import React from "react";
-import type { propsChildren } from "types/propTypes";
+import type { propsChildren } from "@/types/propTypes";
 
 function CardDisplay(props: propsChildren) {
   return (

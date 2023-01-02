@@ -1,6 +1,6 @@
 import { Header } from "@mantine/core";
 import React from "react";
-import type { UIHeaderPropsType } from "types/propTypes";
+import type { UIHeaderPropsType } from "@/types/propTypes";
 
 function AllHeader(props: UIHeaderPropsType) {
   return (
