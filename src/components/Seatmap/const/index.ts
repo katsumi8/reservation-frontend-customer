@@ -1,4 +1,4 @@
-import { Table } from "types/hooksTypes";
+import { Table } from "@/types/hooksTypes";
 
 const roomData = {
   horizontalLength: 15,
