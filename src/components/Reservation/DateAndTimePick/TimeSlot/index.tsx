@@ -1,9 +1,9 @@
 import React from "react";
 import { NativeSelect } from "@mantine/core";
 import { useDispatch } from "react-redux";
-import { useSelector } from "../../../../../contexts/store";
-import { selectTimeSlot } from "../../../../../contexts/slices/dateAndTimeSlice";
-import { dropdownTypes } from "types/propTypes";
+import { useSelector } from "@/contexts/store";
+import { selectTimeSlot } from "@/contexts/slices/dateAndTimeSlice";
+import { dropdownTypes } from "@/types/propTypes";
 
 const TimeSlot = ({ timeSlotDropdownList }: dropdownTypes) => {
   const timeSlot = useSelector((state) => state.timeAndSlot.timeSlot);
