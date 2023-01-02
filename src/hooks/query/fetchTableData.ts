@@ -1,5 +1,5 @@
+import { Table } from "@/types/hooksTypes";
 import { gql, useQuery } from "@apollo/client";
-import { Table } from "types/hooksTypes";
 
 const GET_TABLES = gql`
   query {
