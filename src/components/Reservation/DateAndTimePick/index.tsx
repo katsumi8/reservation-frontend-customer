@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import { Calendar } from "tabler-icons-react";
 import { dropdownTypes } from "@/types/propTypes";
 import { useDateSelectCreator } from "./hooks";
-import { startOfDateFinder } from "const/initialDate";
+import { startOfDateFinder } from "@/const/initialDate";
 
 const DateAndTimePick = ({ timeSlotDropdownList }: dropdownTypes) => {
   const { selectedDate, onChangeHandler } = useDateSelectCreator();
