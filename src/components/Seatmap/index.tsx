@@ -5,33 +5,26 @@ import CardDisplay from "@/uiParts/CardDisplay";
 import SeatMap from "./presenter";
 import DisplayReservationInfo from "./DisplayReservationInfo";
 import ButtonUI from "@/uiParts/ButtonUI";
+import { TitleProp } from "@/types/propTypes";
 
-const SeatmapPage = () => {
-  const title = "Choose your table";
-
+const SeatmapPage = ({ title }: TitleProp) => {
   return (
-    <React.Fragment>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content="Choose your table" />
-      </Head>
-      <>
-        <AllHeader title={title}>
-          <CardDisplay>
-            <DisplayReservationInfo />
-          </CardDisplay>
-          <CardDisplay>
-            <SeatMap />
-          </CardDisplay>
-          <ButtonUI
-            primaryLabel="Next →"
-            secondaryLabel="← Go back"
-            buttonType="button"
-            pathNames={["/ProfileInput", "/Reservation"]}
-          />
-        </AllHeader>
-      </>
-    </React.Fragment>
+    <>
+      <AllHeader title={title}>
+        <CardDisplay>
+          <DisplayReservationInfo />
+        </CardDisplay>
+        <CardDisplay>
+          <SeatMap />
+        </CardDisplay>
+        <ButtonUI
+          primaryLabel="Next →"
+          secondaryLabel="← Go back"
+          buttonType="button"
+          pathNames={["/ProfileInput", "/Reservation"]}
+        />
+      </AllHeader>
+    </>
   );
 };
 

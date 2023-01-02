@@ -29,3 +29,4 @@ export type UIButtonPropsType = {
 };
 
 
+export type TitleProp = { title: string }

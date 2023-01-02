@@ -1,3 +1,4 @@
+import Thankyou from "@/components/Thankyou";
 import Head from "next/head";
 import React from "react";
 
@@ -10,7 +11,7 @@ function ThankyouPage() {
         <title>{title}</title>
         <meta name="description" content="Make a reservation at this cafe" />
       </Head>
-
+      <Thankyou title={title} />
     </div>
   );
 }

@@ -1,21 +1,14 @@
 import Head from "next/head";
 import React from "react";
 import AllHeader from "@/uiParts/AllHeader";
+import { TitleProp } from "@/types/propTypes";
 
-const ThankyouPage = () => {
-  const title = "Thank you";
-
+const Thankyou = ({ title }: TitleProp) => {
   return (
-    <React.Fragment>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content="Thank you" />
-      </Head>
-      <>
-        <AllHeader title={title}>Thank you</AllHeader>
-      </>
-    </React.Fragment>
+    <>
+      <AllHeader title={title}>Thank you</AllHeader>
+    </>
   );
 };
 
-export default ThankyouPage;
+export default Thankyou;
