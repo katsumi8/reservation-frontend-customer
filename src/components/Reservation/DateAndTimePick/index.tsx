@@ -3,7 +3,7 @@ import TimeSlot from "./TimeSlot";
 import { DatePicker } from "@mantine/dates";
 import dayjs from "dayjs";
 import { Calendar } from "tabler-icons-react";
-import { dropdownTypes } from "types/propTypes";
+import { dropdownTypes } from "@/types/propTypes";
 import { useDateSelectCreator } from "./hooks";
 import { startOfDateFinder } from "const/initialDate";
 
