@@ -1,17 +1,25 @@
 import React from "react";
-import ReserveForm from "./presenter";
-import CardDisplay from "../../uiParts/CardDisplay";
-import AllHeader from "../../uiParts/AllHeader";
 import { TitleProp } from "@/types/propTypes";
+import { useHandleReservation } from "../../hooks/useHandleReservation";
+import ReservationPresenter from "./Presenter";
 
 export default function Reservation({ title }: TitleProp) {
+  const {
+    timeSlotDropdown,
+    customerInputComment,
+    buttonLabel,
+    descriptionDispatcher,
+    submitHandler,
+  } = useHandleReservation();
+
   return (
-    <div>
-      <AllHeader title={title}>
-        <CardDisplay>
-          <ReserveForm />
-        </CardDisplay>
-      </AllHeader>
-    </div>
+    <ReservationPresenter
+      title={title}
+      timeSlotDropdown={timeSlotDropdown}
+      customerInputComment={customerInputComment}
+      buttonLabel={buttonLabel}
+      descriptionDispatcher={descriptionDispatcher}
+      submitHandler={submitHandler}
+    />
   );
 }

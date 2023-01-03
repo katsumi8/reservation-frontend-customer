@@ -1,12 +1,14 @@
-import timeSlotDropdownAll from "./const/timeSlotDropdownAll";
+import timeSlotDropdownAll from "../components/Reservation/const/timeSlotDropdownAll";
+import { currentSlot } from "../components/Reservation/const/todaysFirstTimeSlot";
+
+
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
-import { currentSlot } from "./const/todaysFirstTimeSlot";
 import { deselectTable } from "@/contexts/slices/tableSlice";
 import { inputDescription } from "@/contexts/slices/descriptionSlice";
 import React, { useEffect, useState } from "react";
 import { useTableReservationStatusUpdate } from "@/utils/mutation/tableReservationStatusUpdate";
-import { dateCreator } from "../Seatmap/DisplayReservationInfo/hooks";
+import { dateCreator } from "../components/Seatmap/DisplayReservationInfo/hooks";
 import { TimeInput } from "@/types/graphqlTypes";
 import { useSelector } from "@/contexts/store";
 

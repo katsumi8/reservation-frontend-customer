@@ -1,9 +1,9 @@
 import React from "react";
-import { NativeSelect } from "@mantine/core";
 import { useDispatch } from "react-redux";
 import { useSelector } from "@/contexts/store";
 import { selectTimeSlot } from "@/contexts/slices/dateAndTimeSlice";
 import { dropdownTypes } from "@/types/propTypes";
+import TimeSlotPresenter from "./Presenter";
 
 const TimeSlot = ({ timeSlotDropdownList }: dropdownTypes) => {
   const timeSlot = useSelector((state) => state.timeAndSlot.timeSlot);
@@ -14,14 +14,10 @@ const TimeSlot = ({ timeSlotDropdownList }: dropdownTypes) => {
   }
 
   return (
-    <NativeSelect
-      value={timeSlot}
-      onChange={(e) => {
-        dispatch(selectTimeSlot(e.target.value));
-      }}
-      data={timeSlotDropdownList}
-      style={{ display: "inline-block" }}
-      required
+    <TimeSlotPresenter
+      timeSlot={timeSlot}
+      dispatch={dispatch}
+      timeSlotDropdownList={timeSlotDropdownList}
     />
   );
 };
