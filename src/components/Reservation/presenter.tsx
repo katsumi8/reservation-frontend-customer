@@ -5,7 +5,7 @@ import { Textarea } from "@mantine/core";
 import ButtonUI from "@/uiParts/ButtonUI";
 import AllHeader from "@/uiParts/AllHeader";
 import CardDisplay from "@/uiParts/CardDisplay";
-import { ReservationPresenterProps } from "@/types/propTypes";
+import type { ReservationPresenterProps } from "@/types/propTypes";
 
 
 const ReservationPresenter = ({
