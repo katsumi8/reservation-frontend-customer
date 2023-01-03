@@ -1,18 +1,18 @@
 import React from "react";
 import { dropdownTypes } from "@/types/propTypes";
 import { useDateSelectCreator } from "../../../hooks/useDateSelectCreator";
-import { startOfDateFinder } from "@/const/initialDate";
+import { useStartOfDateFinder } from "@/hooks/useStartOfDateFinder";
 import DateAndTimePickPresenter from "./Presenter";
 
 const DateAndTimePick = ({ timeSlotDropdownList }: dropdownTypes) => {
   const { selectedDate, onChangeHandler } = useDateSelectCreator();
-  const startOfCalender = startOfDateFinder();
+  const { startDate } = useStartOfDateFinder();
 
   return (
     <DateAndTimePickPresenter
       selectedDate={selectedDate}
       onChangeHandler={onChangeHandler}
-      startOfCalender={startOfCalender}
+      startOfCalender={startDate}
       timeSlotDropdownList={timeSlotDropdownList}
     />
   );

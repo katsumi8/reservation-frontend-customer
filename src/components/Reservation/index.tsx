@@ -1,7 +1,7 @@
 import React from "react";
 import { TitleProp } from "@/types/propTypes";
 import { useHandleReservation } from "../../hooks/useHandleReservation";
-import ReservationPresenter from "./presenter";
+import ReservationPresenter from "./Presenter";
 
 export default function Reservation({ title }: TitleProp) {
   const {

@@ -3,7 +3,7 @@ import {
   bookingCloseHour,
   minOptions,
 } from "@/const/openingHours";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 
 export const useTimeSlot = () => {
   const options = useMemo(() => {

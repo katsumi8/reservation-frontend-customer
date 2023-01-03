@@ -1,12 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { startOfDateFinder } from "@/const/initialDate";
-
-const initialDate = startOfDateFinder();
 
 export const dateAndTimeSlice = createSlice({
   name: "dateAndTime",
   initialState: {
-    date: initialDate,
+    date: new Date(),
     timeSlot: "",
   },
 

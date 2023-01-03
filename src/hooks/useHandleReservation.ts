@@ -1,6 +1,5 @@
-import timeSlotDropdownAll from "../components/Reservation/const/timeSlotDropdownAll";
-import { currentSlot } from "../components/Reservation/const/todaysFirstTimeSlot";
-
+// import timeSlotDropdownAll from "../components/Reservation/const/timeSlotDropdownAll";
+// import { currentSlot } from "../components/Reservation/const/todaysFirstTimeSlot";
 
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
@@ -11,8 +10,10 @@ import { useTableReservationStatusUpdate } from "@/utils/mutation/tableReservati
 import { dateCreator } from "../components/Seatmap/DisplayReservationInfo/hooks";
 import { TimeInput } from "@/types/graphqlTypes";
 import { useSelector } from "@/contexts/store";
+import { useTimeSlot } from "./useTimeSlot";
 
 export const useHandleReservation = () => {
+  const { currentSlot, options: timeSlotDropdownAll } = useTimeSlot();
   const { updateTableReserveStatus } = useTableReservationStatusUpdate();
   const router = useRouter();
   const dispatch = useDispatch();
@@ -31,13 +32,18 @@ export const useHandleReservation = () => {
     ""
   );
 
+  console.log(compareEnteredDate);
+
   useEffect(() => {
     // Decide time slots according to the entered Date
-    if (compareEnteredDate === compareToday) {
-      if (timeSlotDropdownAll.indexOf(currentSlot) != -1) {
-        const filterIndex = timeSlotDropdownAll.indexOf(currentSlot);
-        setTimeSlotDropdown(timeSlotDropdownAll.slice(filterIndex));
-      }
+    if (
+      compareEnteredDate === compareToday &&
+      timeSlotDropdownAll.indexOf(currentSlot) != -1
+    ) {
+      const filterIndex = timeSlotDropdownAll.indexOf(currentSlot);
+      setTimeSlotDropdown(timeSlotDropdownAll.slice(filterIndex));
+    } else {
+      setTimeSlotDropdown(timeSlotDropdownAll);
     }
   }, [compareEnteredDate]);
 
