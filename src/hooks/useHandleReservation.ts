@@ -32,8 +32,6 @@ export const useHandleReservation = () => {
     ""
   );
 
-  console.log(compareEnteredDate);
-
   useEffect(() => {
     // Decide time slots according to the entered Date
     if (
