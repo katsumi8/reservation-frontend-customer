@@ -1,25 +1,36 @@
-import Head from "next/head";
 import React from "react";
-import AllHeader from "@/uiParts/AllHeader";
-import CardDisplay from "@/uiParts/CardDisplay";
-import DisplayReservationInfo from "../Seatmap/DisplayReservationInfo";
-import BasicProfileInfo from "./presenter";
 import { TitleProp } from "@/types/propTypes";
+import ProfileInfoPresenter from "./Presenter";
+import { useCreateForm } from "@/hooks/useCreateForm";
 
 const ProfileInfo = ({ title }: TitleProp) => {
+  const {
+    firstNameProps,
+    lastNameProps,
+    emailProps,
+    phoneNumberProps,
+    termsOfServiceProps,
+    inputStyle,
+    phoneNumberError,
+    onFocusPhoneHandler,
+    onBlurPhoneHandler,
+    submitHandler,
+  } = useCreateForm();
+
   return (
-    <>
-      <AllHeader title={title}>
-        <div>Reservation info</div>
-        <CardDisplay>
-          <DisplayReservationInfo />
-        </CardDisplay>
-        <div>Your info</div>
-        <CardDisplay>
-          <BasicProfileInfo />
-        </CardDisplay>
-      </AllHeader>
-    </>
+    <ProfileInfoPresenter
+      title={title}
+      firstNameProps={firstNameProps}
+      lastNameProps={lastNameProps}
+      emailProps={emailProps}
+      phoneNumberProps={phoneNumberProps}
+      termsOfServiceProps={termsOfServiceProps}
+      inputStyle={inputStyle}
+      phoneNumberError={phoneNumberError}
+      onFocusPhoneHandler={onFocusPhoneHandler}
+      onBlurPhoneHandler={onBlurPhoneHandler}
+      submitHandler={submitHandler}
+    />
   );
 };
 

@@ -2,11 +2,11 @@ import { useSelector } from "@/contexts/store";
 import {
   dateCreator,
   enteredGuestFix,
-} from "../Seatmap/DisplayReservationInfo/hooks";
+} from "../components/Seatmap/DisplayReservationInfo/hooks";
 import { useForm } from "@mantine/form";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { styles } from "./const";
+import { styles } from "../const/profileInputStyles";
 import { useReservationCreator } from "@/utils/mutation/reservationCreate";
 import { UserInput, ReservationCreateVariables } from "@/types/graphqlTypes";
 
