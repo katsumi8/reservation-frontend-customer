@@ -1,15 +1,11 @@
 import { useSelector } from "@/contexts/store";
-import {
-  dateCreator,
-  enteredGuestFix,
-} from "./useReservationInfoTable";
+import { useReservationInfoTable } from "./useReservationInfoTable";
 import { useForm } from "@mantine/form";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { styles } from "../const/profileInputStyles";
 import { useReservationCreator } from "@/utils/mutation/reservationCreate";
 import { UserInput, ReservationCreateVariables } from "@/types/graphqlTypes";
-
 
 export const useCreateForm = () => {
   let inputStyle = styles.input;
@@ -23,6 +19,7 @@ export const useCreateForm = () => {
     ""
   );
   const description = useSelector((state) => state.description.description);
+  const { dateCreator, enteredGuestFix } = useReservationInfoTable();
   const reservedDate = dateCreator(date);
   const enteredGuests = enteredGuestFix(customers, moreCustomers);
   const { reservationCreate } = useReservationCreator();
