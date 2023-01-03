@@ -1,10 +1,10 @@
 import Head from "next/head";
 import React from "react";
-import AllHeader from "@/uiParts/AllHeader";
-import CardDisplay from "@/uiParts/CardDisplay";
+import AllHeader from "@/components/Common/AllHeader";
+import CardDisplay from "@/components/Common/CardDisplay";
 import SeatMap from "./presenter";
 import DisplayReservationInfo from "./DisplayReservationInfo";
-import ButtonUI from "@/uiParts/ButtonUI";
+import ButtonUI from "@/components/Common/ButtonUI";
 import { TitleProp } from "@/types/propTypes";
 
 const SeatmapPage = ({ title }: TitleProp) => {

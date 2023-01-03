@@ -2,9 +2,9 @@ import { TextInput, Checkbox, Group, InputWrapper } from "@mantine/core";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import { classStyle } from "../../const/profileInputStyles";
-import ButtonUI from "@/uiParts/ButtonUI";
-import AllHeader from "@/uiParts/AllHeader";
-import CardDisplay from "@/uiParts/CardDisplay";
+import ButtonUI from "@/components/Common/ButtonUI";
+import AllHeader from "@/components/Common/AllHeader";
+import CardDisplay from "@/components/Common/CardDisplay";
 import DisplayReservationInfo from "../Seatmap/DisplayReservationInfo";
 import { ProfileInfoPresenterProps } from "@/types/propTypes";
 

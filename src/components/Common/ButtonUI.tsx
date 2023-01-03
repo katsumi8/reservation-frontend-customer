@@ -1,6 +1,6 @@
 import type { UIButtonPropsType } from "@/types/propTypes";
 import { Button, Group } from "@mantine/core";
-import { useRouting } from "@/uiParts/hooks";
+import { useRouting } from "@/hooks/useRouting";
 
 const ButtonUI = ({
   primaryLabel,

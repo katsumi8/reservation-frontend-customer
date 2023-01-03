@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import AllHeader from "@/uiParts/AllHeader";
+import AllHeader from "@/components/Common/AllHeader";
 import { TitleProp } from "@/types/propTypes";
 
 const Thankyou = ({ title }: TitleProp) => {

@@ -2,9 +2,9 @@ import React from "react";
 import DateAndTimePick from "./DateAndTimePick";
 import NoOfGuests from "./NoOfGuests";
 import { Textarea } from "@mantine/core";
-import ButtonUI from "@/uiParts/ButtonUI";
-import AllHeader from "@/uiParts/AllHeader";
-import CardDisplay from "@/uiParts/CardDisplay";
+import ButtonUI from "@/components/Common/ButtonUI";
+import AllHeader from "@/components/Common/AllHeader";
+import CardDisplay from "@/components/Common/CardDisplay";
 import type { ReservationPresenterProps } from "@/types/propTypes";
 
 
