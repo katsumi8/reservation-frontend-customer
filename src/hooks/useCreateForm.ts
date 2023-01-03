@@ -2,7 +2,7 @@ import { useSelector } from "@/contexts/store";
 import {
   dateCreator,
   enteredGuestFix,
-} from "../components/Seatmap/DisplayReservationInfo/hooks";
+} from "./useReservationInfoTable";
 import { useForm } from "@mantine/form";
 import { useState } from "react";
 import { useRouter } from "next/router";

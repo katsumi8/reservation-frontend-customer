@@ -7,7 +7,7 @@ import { deselectTable } from "@/contexts/slices/tableSlice";
 import { inputDescription } from "@/contexts/slices/descriptionSlice";
 import React, { useEffect, useState } from "react";
 import { useTableReservationStatusUpdate } from "@/utils/mutation/tableReservationStatusUpdate";
-import { dateCreator } from "../components/Seatmap/DisplayReservationInfo/hooks";
+import { dateCreator } from "./useReservationInfoTable";
 import { TimeInput } from "@/types/graphqlTypes";
 import { useSelector } from "@/contexts/store";
 import { useTimeSlot } from "./useTimeSlot";

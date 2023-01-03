@@ -1,7 +1,8 @@
+import { ApolloError } from "@apollo/client";
 import { SharedButtonProps } from "@mantine/core";
 import { AnyAction, Dispatch } from "@reduxjs/toolkit";
 import type { ReactNode } from "react";
-import { Table } from "./hooksTypes";
+import { Table, tableInputState } from "./hooksTypes";
 
 export type dropdownTypes = {
   timeSlotDropdownList: string[];
@@ -97,4 +98,35 @@ export type ProfileInfoPresenterProps = {
   onFocusPhoneHandler: (_e: React.FocusEvent<HTMLElement, Element>) => void;
   onBlurPhoneHandler: (_e: React.FocusEvent<HTMLElement, Element>) => void;
   submitHandler: (event?: React.FormEvent<Element> | undefined) => void;
+};
+
+export type DisplayReservationInfoPresenterProps = {
+  description: string;
+  enteredGuests: number;
+  reservedDate: string;
+  time: string;
+};
+
+export type TableGridPresenterProps = {
+  tableData: Table[];
+  getColor: ({
+    isReserved,
+    id,
+  }: tableInputState) => "#99d98c" | "#6c757d" | "#caf0f8";
+  selectHandler: (
+    tableData: Table[],
+    { isReserved, id }: tableInputState
+  ) => void;
+  doubleIdChecker: (
+    tableName: string,
+    index: number,
+    tableData: Table[]
+  ) => string;
+};
+
+export type SeatMapPresenterProps = {
+  loading: boolean;
+  error: ApolloError | undefined;
+  title: string;
+  seatmap: Table[];
 };

@@ -1,31 +1,19 @@
-import Head from "next/head";
 import React from "react";
-import AllHeader from "@/components/Common/AllHeader";
-import CardDisplay from "@/components/Common/CardDisplay";
-import SeatMap from "./presenter";
-import DisplayReservationInfo from "./DisplayReservationInfo";
-import ButtonUI from "@/components/Common/ButtonUI";
 import { TitleProp } from "@/types/propTypes";
+import { useFetchTableData } from "@/utils/query/fetchTableData";
+import SeatMapPresenter from "./presenter";
 
-const SeatmapPage = ({ title }: TitleProp) => {
+const SeatMap = ({ title }: TitleProp) => {
+  const { seatmap, error, loading } = useFetchTableData();
+
   return (
-    <>
-      <AllHeader title={title}>
-        <CardDisplay>
-          <DisplayReservationInfo />
-        </CardDisplay>
-        <CardDisplay>
-          <SeatMap />
-        </CardDisplay>
-        <ButtonUI
-          primaryLabel="Next →"
-          secondaryLabel="← Go back"
-          buttonType="button"
-          pathNames={["/your-information", "/"]}
-        />
-      </AllHeader>
-    </>
+    <SeatMapPresenter
+      loading={loading}
+      error={error}
+      title={title}
+      seatmap={seatmap}
+    />
   );
 };
 
-export default SeatmapPage;
+export default SeatMap;
