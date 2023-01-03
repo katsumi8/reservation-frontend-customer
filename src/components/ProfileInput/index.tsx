@@ -1,6 +1,6 @@
 import React from "react";
 import { TitleProp } from "@/types/propTypes";
-import ProfileInfoPresenter from "./Presenter";
+import ProfileInfoPresenter from "./presenter";
 import { useCreateForm } from "@/hooks/useCreateForm";
 
 const ProfileInfo = ({ title }: TitleProp) => {
