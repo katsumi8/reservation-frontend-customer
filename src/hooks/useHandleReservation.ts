@@ -1,16 +1,13 @@
-// import timeSlotDropdownAll from "../components/Reservation/const/timeSlotDropdownAll";
-// import { currentSlot } from "../components/Reservation/const/todaysFirstTimeSlot";
-
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { deselectTable } from "@/contexts/slices/tableSlice";
 import { inputDescription } from "@/contexts/slices/descriptionSlice";
 import React, { useEffect, useState } from "react";
 import { useTableReservationStatusUpdate } from "@/utils/mutation/tableReservationStatusUpdate";
-import { dateCreator } from "./useReservationInfoTable";
 import { TimeInput } from "@/types/graphqlTypes";
 import { useSelector } from "@/contexts/store";
 import { useTimeSlot } from "./useTimeSlot";
+import { useReservationInfoTable } from "./useReservationInfoTable";
 
 export const useHandleReservation = () => {
   const { currentSlot, options: timeSlotDropdownAll } = useTimeSlot();
@@ -26,6 +23,7 @@ export const useHandleReservation = () => {
   const compareEnteredDate = enteredDate.getDate();
   const compareToday = new Date().getDate();
   const [timeSlotDropdown, setTimeSlotDropdown] = useState(timeSlotDropdownAll);
+  const { dateCreator } = useReservationInfoTable();
   const reservedDate = dateCreator(enteredDate); // Extract date to string like 2022/08/11
   const timeSlot = useSelector((state) => state.timeAndSlot.timeSlot).replace(
     / /g,
