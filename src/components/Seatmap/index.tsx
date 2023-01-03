@@ -21,7 +21,7 @@ const SeatmapPage = ({ title }: TitleProp) => {
           primaryLabel="Next →"
           secondaryLabel="← Go back"
           buttonType="button"
-          pathNames={["/ProfileInput", "/Reservation"]}
+          pathNames={["/your-information", "/"]}
         />
       </AllHeader>
     </>

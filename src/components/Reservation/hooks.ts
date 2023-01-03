@@ -5,7 +5,7 @@ import { currentSlot } from "./const/todaysFirstTimeSlot";
 import { deselectTable } from "@/contexts/slices/tableSlice";
 import { inputDescription } from "@/contexts/slices/descriptionSlice";
 import React, { useEffect, useState } from "react";
-import { useTableReservationStatusUpdate } from "@/hooks/mutation/tableReservationStatusUpdate";
+import { useTableReservationStatusUpdate } from "@/utils/mutation/tableReservationStatusUpdate";
 import { dateCreator } from "../Seatmap/DisplayReservationInfo/hooks";
 import { TimeInput } from "@/types/graphqlTypes";
 import { useSelector } from "@/contexts/store";
@@ -64,11 +64,11 @@ export const useHandleReservation = () => {
   const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (customerNumber === "more") {
-      router.push({ pathname: "/ProfileInput" });
+      router.push({ pathname: "/your-information" });
     } else {
       updateTableReserveStatus({ variables: { time: updateVariable } });
       router.push({
-        pathname: "/Seatmap", //URL
+        pathname: "/seat-select", //URL
       });
     }
   };

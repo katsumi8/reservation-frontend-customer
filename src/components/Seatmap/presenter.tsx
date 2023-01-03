@@ -2,7 +2,7 @@ import React from "react";
 import { Tabs } from "@mantine/core";
 import { ToolsKitchen2, Sun } from "tabler-icons-react";
 import TableGrid from "./TableGrid";
-import { useFetchTableData } from "@/hooks/query/fetchTableData";
+import { useFetchTableData } from "@/utils/query/fetchTableData";
 
 const SeatMap = () => {
   const { seatmap, error, loading } = useFetchTableData();

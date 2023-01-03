@@ -68,7 +68,7 @@ const BasicProfileInfo = () => {
         secondaryLabel="← Go back"
         buttonType="submit"
         secondaryButtonType="button"
-        pathNames={["/Thankyou", "/Seatmap"]}
+        pathNames={["/thank-you", "/seat-select"]}
       />
     </form>
   );

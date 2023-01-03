@@ -7,7 +7,7 @@ import { useForm } from "@mantine/form";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { styles } from "./const";
-import { useReservationCreator } from "@/hooks/mutation/reservationCreate";
+import { useReservationCreator } from "@/utils/mutation/reservationCreate";
 import { UserInput, ReservationCreateVariables } from "@/types/graphqlTypes";
 
 
