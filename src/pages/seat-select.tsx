@@ -1,4 +1,4 @@
-import SeatmapPage from "@/components/Seatmap";
+import Seatmap from "@/components/Seatmap";
 import Head from "next/head";
 import React from "react";
 
@@ -11,7 +11,7 @@ function SeatSelect() {
         <title>{title}</title>
         <meta name="description" content="Make a reservation at this cafe" />
       </Head>
-      <SeatmapPage title={title} />
+      <Seatmap title={title} />
     </div>
   );
 }

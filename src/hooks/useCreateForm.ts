@@ -105,7 +105,7 @@ export const useCreateForm = () => {
       }
     }
 
-    router.push({ pathname: "/Thankyou" });
+    router.push({ pathname: "/thank-you" });
   };
 
   const submitHandler = form.onSubmit(submitInsideFn);
