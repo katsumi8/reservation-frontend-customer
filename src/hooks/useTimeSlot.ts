@@ -44,5 +44,8 @@ export const useTimeSlot = () => {
     return `${hourString} : ${mins}`;
   }, []);
 
+  // set initial timeslot in useEffect
+
+
   return { currentSlot, options };
 };
